@@ -13,11 +13,8 @@ module.exports = {
   theme: {
     colors: {
       primary,
-      black: colors.white,
-      transparent: colors.transparent,
-      yellow: {
-        700: '#F5C521'
-      },
+      black: colors.black,
+      white: colors.white,
       gray: {
         300: '#d9dae8',
         500: '#999AA5',
@@ -26,30 +23,30 @@ module.exports = {
         800: '#242529',
         900: '#191B1F',
         950: '#101215',
-      }
+      },
+      transparent: colors.transparent,
+      yellow: {
+        700: '#F5C521',
+      },
     },
+
     extend: {
       spacing: {
         0.5: '0.12rem',
-        layout: '2.75rem'
+        layout: '2.75rem',
       },
       fontSize: {
-        '2lg': '1.38rem'
+        '2lg': '1.38rem',
       },
       borderRadius: {
         image: '0.5rem',
-        layout: '0.8rem'
+        layout: '0.8rem',
       },
       transitionTimingFunction: {
-        DEFAULT: 'ease-in-out'
+        DEFAULT: 'ease-in-out',
       },
       transitionDuration: {
-        DEFAULT: '200ms'
-      },
-      zIndex: {
-        1: '1',
-        2: '2',
-        3: '3'
+        DEFAULT: '200ms',
       },
       keyframes: {
         fade: {
@@ -66,14 +63,19 @@ module.exports = {
           },
           '100%': {
             opacity: 1,
-            transform: 'scale(1)'
-          }
-        }
+            transform: 'scale(1)',
+          },
+        },
       },
       animation: {
         fade: 'fade .5s ease-in-out',
-        scaleIn: 'scaleIn .35s ease-in-out'
-      }
+        scaleIn: 'scaleIn .35s ease-in-out',
+      },
+      zIndex: {
+        1: '1',
+        2: '2',
+        3: '3',
+      },
     },
   },
   plugins: [
