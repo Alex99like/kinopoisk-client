@@ -9,6 +9,7 @@ import { Heading } from '@/components/ui/heading/Heading'
 import { data } from 'autoprefixer'
 import { Button } from '@/components/ui/form-elements/Button'
 import { AuthFields } from './AuthField'
+import { useActions } from '@/hooks/useActions'
 
 export const Auth = () => {
   useAuthRedirect()
@@ -26,8 +27,7 @@ export const Auth = () => {
     mode: 'onChange'
   })
   
-  const login = (data: any) => {}
-  const register = (data: any) => {}
+  const { login, register } = useActions()
 
   const onSubmit: SubmitHandler<IAuthInput> = (data) => {
     if (type === 'login') login(data)
