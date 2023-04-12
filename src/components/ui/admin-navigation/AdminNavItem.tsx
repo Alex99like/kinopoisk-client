@@ -1,0 +1,24 @@
+import React, { FC } from 'react'
+import { INavItem } from './admin-navigation.interface'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+import cn from 'classnames'
+
+import styles from './AdminNavigation.module.scss'
+
+export const NavItem: FC<{ item: INavItem }> = ({ item: { link, title } }) => {
+    const { asPath } = useRouter()
+
+    return (
+    <li>
+      <Link href={link} legacyBehavior>
+        <a className={cn({
+          [styles.active]: asPath === link
+        })}
+        >
+          {title}
+        </a>
+      </Link>
+    </li>
+  )
+}
