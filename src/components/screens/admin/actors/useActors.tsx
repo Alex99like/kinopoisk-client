@@ -1,6 +1,7 @@
 import { ITableItem } from "@/components/ui/admin-table/AdminTable/admin-table.interface"
 import { getAdminUrl } from "@/config/url.config"
 import { useDebounce } from "@/hooks/useDebounce"
+import { ActorService } from "@/service/actor.service"
 import { toastError } from "@/utils/toastError"
 import { useRouter } from "next/router"
 import { ChangeEvent, useMemo, useState } from "react"
