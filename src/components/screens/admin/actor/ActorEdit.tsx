@@ -12,6 +12,7 @@ import { IActorEditInput } from "./actor-edit.interface"
 import { useActorEdit } from "./useActorEdit"
 
 import formStyles from '@/components/shared/admin/adminForm.module.scss'
+import { UploadField } from "@/components/ui/form-elements/UploadField/UploadField"
 
 export const ActorEdit: FC = () => {
 	const {
@@ -48,7 +49,7 @@ export const ActorEdit: FC = () => {
 							register={register}
 							error={errors.slug?.message}
 						/>
-						{/* <Controller
+						<Controller
 							name="photo"
 							control={control}
 							defaultValue=""
@@ -58,7 +59,7 @@ export const ActorEdit: FC = () => {
 							}) => (
 								<UploadField
 									placeholder="Photo"
-									error={error}
+									error={error?.message}
 									folder="actors"
 									image={value}
 									onChange={onChange}
@@ -67,7 +68,7 @@ export const ActorEdit: FC = () => {
 							rules={{
 								required: 'Photo is required!',
 							}}
-						/> */}
+						/>
 					</div>
 
 					<Button>Update</Button>
